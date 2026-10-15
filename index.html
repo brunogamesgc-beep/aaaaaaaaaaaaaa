@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otimiza aí — Otimização Avançada de PC | Jogos & Trabalho</title>
+  <meta name="description" content="Desbloqueie o máximo de desempenho do seu PC. Otimização manual profissional via AnyDesk para jogos e trabalho. Planos a partir de R$ 34,99." />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.jpg" />
+  <meta property="og:image" content="logo.jpg" />
+  <meta name="theme-color" content="#05070c" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Otimiza aí — Otimização Avançada de PC" />
+  <meta property="og:description" content="Desbloqueie o máximo de desempenho do seu PC. Otimização manual profissional via AnyDesk. Planos a partir de R$ 34,99." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Otimiza aí — Otimização Avançada de PC" />
+  <meta name="twitter:description" content="Otimização manual profissional via AnyDesk para jogos e trabalho. Planos a partir de R$ 34,99." />
+  <link rel="preconnect" href="https://api.qrserver.com" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Otimiza aí",
+    "description": "Otimização manual profissional de PC via AnyDesk para jogos e trabalho.",
+    "telephone": "+55-11-95334-7495",
+    "priceRange": "R$ 34,99 - R$ 99,99",
+    "makesOffer": [
+      {"@type": "Offer", "name": "Otimização Essencial", "price": "34.99", "priceCurrency": "BRL"},
+      {"@type": "Offer", "name": "Otimização Elite", "price": "59.99", "priceCurrency": "BRL"},
+      {"@type": "Offer", "name": "Otimização Performance", "price": "99.99", "priceCurrency": "BRL"}
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#05070c',
+            surface: '#070b14',
+            card: '#0b1220',
+            fg: '#e8edf5',
+            mute: '#94a3b8',
+            primary: '#00d2ff',
+            deepblue: '#0070f3',
+            violet: '#9b30ff',
+            wa: '#25D366'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Exo 2"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Exo+2:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    html{scroll-behavior:smooth}
+    body{background:#05070c;color:#e8edf5;font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+    ::selection{background:#00d2ff;color:#05070c}
+    ::-webkit-scrollbar{width:9px}
+    ::-webkit-scrollbar-track{background:#05070c}
+    ::-webkit-scrollbar-thumb{background:linear-gradient(#00d2ff,#0070f3);border-radius:6px}
+    details > summary{list-style:none;cursor:pointer}
+    details > summary::-webkit-details-marker{display:none}
+
+    .grid-bg{background-image:linear-gradient(rgba(0,210,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(0,210,255,.045) 1px,transparent 1px);background-size:56px 56px}
+
+    .brand-grad{background:linear-gradient(135deg,#fff 20%,#00d2ff 60%,#0070f3 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .brand-grad-2{background:linear-gradient(135deg,#00d2ff,#9b30ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    .brand-btn{background:linear-gradient(135deg,#00d2ff 0%,#0070f3 100%);color:#05070c;font-weight:700;box-shadow:0 0 18px rgba(0,210,255,.35);transition:.25s}
+    .brand-btn:hover{box-shadow:0 0 32px rgba(0,210,255,.65);transform:translateY(-2px)}
+    .brand-btn-violet{background:linear-gradient(135deg,#9b30ff 0%,#00d2ff 100%);color:#fff;font-weight:700;box-shadow:0 0 18px rgba(155,48,255,.4);transition:.25s}
+    .brand-btn-violet:hover{box-shadow:0 0 32px rgba(155,48,255,.65);transform:translateY(-2px)}
+    .btn-ghost{border:1px solid rgba(0,210,255,.3);color:#fff;transition:.25s;background:rgba(15,23,42,.6)}
+    .btn-ghost:hover{background:rgba(0,210,255,.1);border-color:#00d2ff;box-shadow:0 0 15px rgba(0,210,255,.25);transform:translateY(-2px)}
+
+    .hero-glow-a{background:radial-gradient(circle,rgba(0,210,255,.20) 0%,rgba(0,112,243,.06) 70%,transparent 100%);filter:blur(70px);animation:float 9s ease-in-out infinite}
+    .hero-glow-b{background:radial-gradient(circle,rgba(155,48,255,.22) 0%,rgba(192,38,211,.07) 70%,transparent 100%);filter:blur(80px);animation:float 11s ease-in-out infinite reverse}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+
+    .card{background:linear-gradient(145deg,rgba(17,24,39,.85) 0%,rgba(9,14,26,.95) 100%);border:1px solid rgba(255,255,255,.08);transition:.25s cubic-bezier(.4,0,.2,1)}
+    .card:hover{border-color:rgba(0,210,255,.6);box-shadow:0 8px 28px -8px rgba(0,210,255,.35);transform:translateY(-4px)}
+    .icon-box{background:linear-gradient(135deg,rgba(0,210,255,.16),rgba(0,112,243,.08));border:1px solid rgba(0,210,255,.3);color:#00d2ff}
+    .icon-box-v{background:linear-gradient(135deg,rgba(155,48,255,.18),rgba(0,210,255,.08));border:1px solid rgba(155,48,255,.35);color:#c084fc}
+
+    .game-card-badge{background:linear-gradient(145deg,rgba(17,24,39,.85) 0%,rgba(9,14,26,.95) 100%);border:1px solid rgba(255,255,255,.08);transition:.25s cubic-bezier(.4,0,.2,1);cursor:pointer}
+    .game-card-badge:hover{border-color:#00d2ff;box-shadow:0 6px 20px -5px rgba(0,210,255,.35);transform:translateY(-4px) scale(1.02)}
+    .game-logo-thumb{width:46px;height:46px;object-fit:contain;border-radius:10px;flex-shrink:0;transition:transform .2s}
+    .game-card-badge:hover .game-logo-thumb{transform:scale(1.12)}
+
+    .logo-round{width:42px;height:42px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#00d2ff,#9b30ff);box-shadow:0 0 16px rgba(0,210,255,.45);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;transition:transform .3s}
+    .logo-round:hover{transform:scale(1.08) rotate(3deg)}
+    .logo-round img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:#000}
+    .plan-banner{position:relative;background:#070b14}
+    .plan-essencial{background:radial-gradient(120% 130% at 85% 10%,rgba(0,210,255,.20),transparent 55%),radial-gradient(120% 130% at 10% 100%,rgba(0,112,243,.16),transparent 55%),#070b14}
+    .plan-elite{background:radial-gradient(120% 130% at 85% 10%,rgba(0,210,255,.24),transparent 55%),radial-gradient(120% 130% at 10% 100%,rgba(155,48,255,.20),transparent 55%),#070b14}
+    .plan-performance{background:radial-gradient(120% 130% at 85% 10%,rgba(155,48,255,.24),transparent 55%),radial-gradient(120% 130% at 10% 100%,rgba(0,210,255,.16),transparent 55%),#070b14}
+    .plan-icon{width:62px;height:62px;border-radius:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#05070c;background:linear-gradient(135deg,#00d2ff,#0070f3);box-shadow:0 0 26px rgba(0,210,255,.5)}
+    .plan-icon-v{color:#fff;background:linear-gradient(135deg,#9b30ff,#00d2ff);box-shadow:0 0 26px rgba(155,48,255,.55)}
+
+    .step-line{background:linear-gradient(90deg,transparent,rgba(0,210,255,.5),rgba(155,48,255,.5),transparent)}
+
+    .plan-pop{border:1px solid rgba(0,210,255,.5) !important;background:linear-gradient(180deg,rgba(0,210,255,.08),rgba(0,112,243,.04)) !important;box-shadow:0 0 34px rgba(0,210,255,.18)}
+
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    .whatsapp-float-btn{box-shadow:0 0 20px rgba(37,211,102,.4),0 10px 25px -5px rgba(0,0,0,.5);transition:.25s cubic-bezier(.175,.885,.32,1.275)}
+    .whatsapp-float-btn:hover{transform:translateY(-4px) scale(1.08);box-shadow:0 0 30px rgba(37,211,102,.7),0 15px 30px -5px rgba(0,0,0,.6)}
+
+    #pixModal:not(.hidden)>div:last-child{animation:popIn .25s ease}
+    @keyframes popIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+
+    .marquee-track{display:flex;gap:2.5rem;width:max-content;animation:marquee 26s linear infinite}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    @media (prefers-reduced-motion:reduce){
+      .reveal,.reveal.show{opacity:1;transform:none;transition:none}
+      .hero-glow-a,.hero-glow-b,.marquee-track{animation:none}
+      #inicio .max-w-3xl > *, .show.rise > *{animation:none;opacity:1}
+      .brand-btn::after{display:none}
+      .pop-badge{animation:none}
+    }
+
+    :focus-visible{outline:2px solid #00d2ff;outline-offset:3px;border-radius:6px}
+    .skip-link{position:fixed;top:-60px;left:16px;z-index:100;background:#00d2ff;color:#05070c;font-weight:700;font-size:13px;padding:10px 18px;border-radius:10px;transition:top .2s}
+    .skip-link:focus{top:12px}
+    header.scrolled{box-shadow:0 8px 30px -10px rgba(0,210,255,.25)}
+    details p{animation:faqIn .3s ease}
+    @keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+    #toTop{opacity:0;pointer-events:none;transform:translateY(8px);transition:.3s}
+    #toTop.show{opacity:1;pointer-events:auto;transform:none}
+    #cartDrawer{transform:translateX(102%);transition:transform .32s cubic-bezier(.2,.7,.3,1)}
+    #cartDrawer.open{transform:none}
+    #cartCount.bump{animation:bump .35s ease}
+    @keyframes bump{0%{transform:scale(.4)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+    #toast{transition:opacity .25s,transform .25s}
+    @media (prefers-reduced-motion:reduce){#cartDrawer{transition:none}#cartCount.bump{animation:none}}
+
+    /* mobile + motion */
+    html{-webkit-text-size-adjust:100%}
+    body,a,button{-webkit-tap-highlight-color:transparent}
+    section[id]{scroll-margin-top:84px}
+    #mobileMenu{max-height:0;overflow:hidden;transition:max-height .35s ease}
+    #mobileMenu.open{max-height:420px}
+    #inicio .max-w-3xl > *{opacity:0;animation:heroUp .7s cubic-bezier(.2,.7,.3,1) forwards}
+    #inicio .max-w-3xl > *:nth-child(1){animation-delay:.05s}
+    #inicio .max-w-3xl > *:nth-child(2){animation-delay:.15s}
+    #inicio .max-w-3xl > *:nth-child(3){animation-delay:.25s}
+    #inicio .max-w-3xl > *:nth-child(4){animation-delay:.35s}
+    #inicio .max-w-3xl > *:nth-child(5){animation-delay:.45s}
+    @keyframes heroUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+    .show.rise > *{animation:riseIn .55s cubic-bezier(.2,.7,.3,1) backwards}
+    .show.rise > *:nth-child(1){animation-delay:.05s}
+    .show.rise > *:nth-child(2){animation-delay:.12s}
+    .show.rise > *:nth-child(3){animation-delay:.19s}
+    .show.rise > *:nth-child(4){animation-delay:.26s}
+    .show.rise > *:nth-child(5){animation-delay:.33s}
+    .show.rise > *:nth-child(6){animation-delay:.4s}
+    @keyframes riseIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+    .brand-btn{position:relative;overflow:hidden}
+    .brand-btn::after{content:'';position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:sheen 4.5s ease-in-out infinite}
+    @keyframes sheen{0%,60%{left:-60%}100%{left:130%}}
+    .pop-badge{animation:popPulse 2.4s ease-in-out infinite}
+    @keyframes popPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.06)}}
+    @media (prefers-reduced-motion:reduce){details p{animation:none}}
+  </style>
+</head>
+<body class="antialiased">
+  <a href="#planos" class="skip-link">Ir para os planos</a>
+
+  <!-- ambient glows -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 hero-glow-a pointer-events-none -z-10"></div>
+  <div class="fixed top-1/3 right-0 w-96 h-96 hero-glow-b pointer-events-none -z-10"></div>
+
+  <!-- Header -->
+  <header id="siteHeader" class="sticky top-0 z-50 bg-bg/90 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-5 h-[72px] flex items-center justify-between gap-4">
+      <a href="#inicio" class="flex items-center gap-3 shrink-0">
+        <span class="logo-round"><img src="logo.jpg" alt="Otimiza aí" /></span>
+        <span class="font-display font-extrabold text-lg sm:text-xl text-white tracking-tight whitespace-nowrap">Otimiza <span class="text-primary">aí</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mute font-medium">
+        <a href="#servicos" class="hover:text-primary transition-colors">Serviços</a>
+        <a href="#jogos" class="hover:text-primary transition-colors">Jogos</a>
+        <a href="#processo" class="hover:text-primary transition-colors">Como funciona</a>
+        <a href="#planos" class="hover:text-primary transition-colors">Planos</a>
+        <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="#planos" class="brand-btn hidden sm:inline-flex items-center h-10 px-4 sm:px-5 rounded-xl text-[13px] sm:text-sm whitespace-nowrap">Ver planos</a>
+        <button onclick="openCart()" class="relative w-10 h-10 rounded-xl border border-white/15 text-fg flex items-center justify-center hover:border-primary/50 transition-colors shrink-0" aria-label="Abrir carrinho">
+          <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+          <span id="cartCount" class="hidden absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-primary text-bg text-[11px] font-bold items-center justify-center">0</span>
+        </button>
+      <button id="menuBtn" class="md:hidden w-10 h-10 rounded-xl border border-white/15 text-fg flex items-center justify-center hover:border-primary/50 transition-colors shrink-0" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+        <span id="menuIcoOpen"><i data-lucide="menu" class="w-5 h-5"></i></span>
+        <span id="menuIcoClose" class="hidden"><i data-lucide="x" class="w-5 h-5"></i></span>
+      </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden">
+      <nav class="px-5 pb-5 pt-1 flex flex-col text-[15px] font-medium">
+        <a href="#servicos" class="mob-link py-3 border-b border-white/10 text-mute hover:text-primary transition-colors">Serviços</a>
+        <a href="#jogos" class="mob-link py-3 border-b border-white/10 text-mute hover:text-primary transition-colors">Jogos</a>
+        <a href="#processo" class="mob-link py-3 border-b border-white/10 text-mute hover:text-primary transition-colors">Como funciona</a>
+        <a href="#planos" class="mob-link py-3 border-b border-white/10 text-mute hover:text-primary transition-colors">Planos</a>
+        <a href="#faq" class="mob-link py-3 text-mute hover:text-primary transition-colors">FAQ</a>
+        <a href="#planos" class="mob-link brand-btn inline-flex items-center justify-center h-11 rounded-xl mt-2">Ver planos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="relative grid-bg overflow-hidden">
+    <div class="hero-glow-a absolute -top-24 -left-24 w-[480px] h-[480px] pointer-events-none"></div>
+    <div class="hero-glow-b absolute top-10 -right-24 w-[440px] h-[440px] pointer-events-none"></div>
+    <div class="relative max-w-6xl mx-auto px-5 pt-20 pb-16 md:pt-28 md:pb-24">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-primary border border-primary/30 bg-primary/10 rounded-full px-3 sm:px-4 py-1.5 max-w-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>
+          <span class="truncate">Otimização manual profissional</span>
+        </div>
+        <h1 class="mt-6 font-display text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.05] text-white">
+          Desbloqueie o <span class="brand-grad">máximo de desempenho</span> do seu PC.
+        </h1>
+        <p class="mt-6 text-lg text-mute leading-relaxed max-w-2xl">
+          Eliminamos travamentos, reduzimos a latência e deixamos seu computador rápido para
+          <strong class="text-white">jogos, trabalho e multitarefa</strong> do dia a dia.
+          Feito ao vivo, na sua tela, via AnyDesk.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a href="#planos" class="brand-btn inline-flex items-center h-12 px-7 rounded-xl text-[15px]">
+            Ver planos
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://wa.me/5511953347495?text=Ol%C3%A1!%20Quero%20otimizar%20meu%20PC." target="_blank" rel="noopener" class="btn-ghost inline-flex items-center h-12 px-7 rounded-xl text-[15px] font-semibold">
+            Falar com especialista
+          </a>
+        </div>
+        <dl class="mt-10 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl text-sm border-t border-white/10 pt-6 sm:pt-8">
+          <div>
+            <dt class="text-mute flex items-center gap-1.5 text-xs sm:text-sm"><i data-lucide="shield-check" class="w-4 h-4 text-primary shrink-0"></i>Anti-cheat</dt>
+            <dd class="mt-1.5 font-bold text-white font-display text-sm sm:text-lg">100% seguro</dd>
+          </div>
+          <div>
+            <dt class="text-mute flex items-center gap-1.5 text-xs sm:text-sm"><i data-lucide="headphones" class="w-4 h-4 text-primary shrink-0"></i>Suporte</dt>
+            <dd class="mt-1.5 font-bold text-white font-display text-sm sm:text-lg">30 dias incluso</dd>
+          </div>
+          <div>
+            <dt class="text-mute flex items-center gap-1.5 text-xs sm:text-sm"><i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>Atendimento</dt>
+            <dd class="mt-1.5 font-bold text-white font-display text-sm sm:text-lg">Todo o Brasil</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <!-- marquee -->
+    <div class="relative border-t border-white/10 bg-surface/80 py-4 overflow-hidden">
+      <div class="marquee-track text-[11px] font-mono uppercase tracking-[0.25em] text-mute">
+        <span>Counter-Strike 2</span><span class="text-primary">•</span><span>Valorant</span><span class="text-primary">•</span><span>Fortnite</span><span class="text-primary">•</span><span>League of Legends</span><span class="text-primary">•</span><span>Apex Legends</span><span class="text-primary">•</span><span>FiveM / GTA V</span><span class="text-primary">•</span>
+        <span>Counter-Strike 2</span><span class="text-primary">•</span><span>Valorant</span><span class="text-primary">•</span><span>Fortnite</span><span class="text-primary">•</span><span>League of Legends</span><span class="text-primary">•</span><span>Apex Legends</span><span class="text-primary">•</span><span>FiveM / GTA V</span><span class="text-primary">•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anti-cheat strip -->
+  <section class="border-b border-white/10 bg-surface">
+    <div class="max-w-6xl mx-auto px-5 py-7 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+      <span class="text-[11px] font-mono text-mute uppercase tracking-[0.25em]">Compatível com</span>
+      <img src="assets/icons/riotgames.svg" alt="Riot Games (Vanguard)" class="h-[22px] w-auto opacity-70 hover:opacity-100 transition-opacity" />
+      <img src="assets/icons/ea.svg" alt="EA (Easy Anti-Cheat)" class="h-[22px] w-auto opacity-70 hover:opacity-100 transition-opacity" />
+      <img src="assets/icons/fortnite.svg" alt="Fortnite" class="h-[22px] w-auto opacity-70 hover:opacity-100 transition-opacity" />
+      <img src="assets/icons/counterstrike.svg" alt="Counter-Strike 2" class="h-[22px] w-auto opacity-70 hover:opacity-100 transition-opacity" />
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="servicos" class="py-20 md:py-28 relative">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="max-w-2xl">
+        <p class="text-[11px] font-mono text-primary uppercase tracking-[0.25em]">01 / Serviços</p>
+        <h2 class="mt-3 font-display text-3xl md:text-[2.75rem] font-extrabold tracking-tight text-white leading-tight">Ajustes manuais no <span class="brand-grad-2">Windows e hardware</span>.</h2>
+        <p class="mt-4 text-mute leading-relaxed">Nada de programa mágico. Cada ajuste é feito à mão, baseado no seu hardware e nos seus jogos.</p>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 rise">
+        <div class="card rounded-2xl p-6"><span class="icon-box w-11 h-11 rounded-xl flex items-center justify-center"><i data-lucide="settings-2" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">Registro do Windows</h3><p class="mt-2 text-sm text-mute leading-relaxed">Tweaks finos para reduzir latência e priorizar processos de jogo.</p></div>
+        <div class="card rounded-2xl p-6"><span class="icon-box w-11 h-11 rounded-xl flex items-center justify-center"><i data-lucide="cpu" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">CPU e GPU</h3><p class="mt-2 text-sm text-mute leading-relaxed">Perfis de energia, prioridade de processos e clocks estáveis.</p></div>
+        <div class="card rounded-2xl p-6"><span class="icon-box w-11 h-11 rounded-xl flex items-center justify-center"><i data-lucide="trash-2" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">Limpeza e debloat</h3><p class="mt-2 text-sm text-mute leading-relaxed">Remoção de processos e serviços de fundo que consomem memória.</p></div>
+        <div class="card rounded-2xl p-6"><span class="icon-box-v w-11 h-11 rounded-xl flex items-center justify-center"><i data-lucide="wifi" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">Rede</h3><p class="mt-2 text-sm text-mute leading-relaxed">Redução de ping, jitter e perda de pacotes em jogos online.</p></div>
+        <div class="card rounded-2xl p-6"><span class="icon-box-v w-11 h-11 rounded-xl flex items-center justify-center"><i data-lucide="gauge" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">FPS máximo</h3><p class="mt-2 text-sm text-mute leading-relaxed">Ajustes gráficos que elevam o FPS sem sacrificar a qualidade.</p></div>
+        <div class="card rounded-2xl p-6"><span class="icon-box w-11 h-11 rounded-xl flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">100% seguro</h3><p class="mt-2 text-sm text-mute leading-relaxed">Compatível com Vanguard, EAC, BattlEye e demais anti-cheats.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="py-20 md:py-28 border-t border-white/10 bg-surface/40">
+    <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-start">
+      <div>
+        <p class="text-[11px] font-mono text-primary uppercase tracking-[0.25em]">02 / Trabalho</p>
+        <h2 class="mt-3 font-display text-3xl md:text-[2.75rem] font-extrabold tracking-tight text-white leading-tight">Também otimizamos para <span class="brand-grad-2">produtividade</span>.</h2>
+        <p class="mt-4 text-mute leading-relaxed">Sua máquina fica rápida para trabalhar: menos consumo de RAM em segundo plano, boot acelerado e multitarefa fluida.</p>
+        <ul class="mt-8 space-y-3.5 text-sm text-fg">
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i></span>Boot do sistema em segundos</li>
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i></span>Navegação e multitarefa fluidas</li>
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i></span>Menos consumo de RAM em segundo plano</li>
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0"><i data-lucide="check" class="w-3.5 h-3.5 text-primary"></i></span>Estabilidade para softwares profissionais</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-3 rise">
+        <div class="card rounded-2xl p-6"><i data-lucide="rocket" class="w-6 h-6 text-primary"></i><p class="mt-4 font-display font-bold text-white">Boot 3x mais rápido</p><p class="mt-1 text-xs text-mute">Inicialização otimizada</p></div>
+        <div class="card rounded-2xl p-6"><i data-lucide="zap" class="w-6 h-6 text-primary"></i><p class="mt-4 font-display font-bold text-white">Resposta instantânea</p><p class="mt-1 text-xs text-mute">Sistema mais ágil</p></div>
+        <div class="card rounded-2xl p-6"><i data-lucide="layers" class="w-6 h-6 text-primary"></i><p class="mt-4 font-display font-bold text-white">Multitarefa fluida</p><p class="mt-1 text-xs text-mute">Várias janelas sem engasgo</p></div>
+        <div class="card rounded-2xl p-6"><i data-lucide="shield-check" class="w-6 h-6 text-primary"></i><p class="mt-4 font-display font-bold text-white">Menos travamentos</p><p class="mt-1 text-xs text-mute">Estabilidade diária</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Games -->
+  <section id="jogos" class="py-20 md:py-28 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="max-w-2xl">
+        <p class="text-[11px] font-mono text-primary uppercase tracking-[0.25em]">03 / Jogos</p>
+        <h2 class="mt-3 font-display text-3xl md:text-[2.75rem] font-extrabold tracking-tight text-white leading-tight">Compatível com os <span class="brand-grad-2">principais títulos</span>.</h2>
+        <p class="mt-4 text-mute leading-relaxed">Ajustes seguros contra qualquer anti-cheat: Vanguard, Easy Anti-Cheat e BattlEye.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 rise">
+        <div class="game-card-badge p-4 rounded-2xl flex flex-col items-center justify-center text-center"><img src="assets/games/cs2.png" alt="Counter-Strike 2" class="game-logo-thumb mb-2.5" loading="lazy" decoding="async" /><strong class="text-xs text-white font-bold">Counter-Strike 2</strong></div>
+        <div class="game-card-badge p-4 rounded-2xl flex flex-col items-center justify-center text-center"><img src="assets/games/valorant.png" alt="Valorant" class="game-logo-thumb mb-2.5" loading="lazy" decoding="async" /><strong class="text-xs text-white font-bold">Valorant</strong></div>
+        <div class="game-card-badge p-4 rounded-2xl flex flex-col items-center justify-center text-center"><img src="assets/games/fortnite.png" alt="Fortnite" class="game-logo-thumb mb-2.5" loading="lazy" decoding="async" /><strong class="text-xs text-white font-bold">Fortnite</strong></div>
+        <div class="game-card-badge p-4 rounded-2xl flex flex-col items-center justify-center text-center"><img src="assets/games/lol.png" alt="League of Legends" class="game-logo-thumb mb-2.5" loading="lazy" decoding="async" /><strong class="text-xs text-white font-bold">League of Legends</strong></div>
+        <div class="game-card-badge p-4 rounded-2xl flex flex-col items-center justify-center text-center"><img src="assets/games/apex.png" alt="Apex Legends" class="game-logo-thumb mb-2.5" loading="lazy" decoding="async" /><strong class="text-xs text-white font-bold">Apex Legends</strong></div>
+        <div class="game-card-badge p-4 rounded-2xl flex flex-col items-center justify-center text-center"><img src="assets/games/fivem.png" alt="FiveM / GTA V" class="game-logo-thumb mb-2.5" loading="lazy" decoding="async" /><strong class="text-xs text-white font-bold">FiveM / GTA V</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="processo" class="py-20 md:py-28 border-t border-white/10 bg-surface/40">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="max-w-2xl">
+        <p class="text-[11px] font-mono text-primary uppercase tracking-[0.25em]">04 / Processo</p>
+        <h2 class="mt-3 font-display text-3xl md:text-[2.75rem] font-extrabold tracking-tight text-white leading-tight">Como o serviço é <span class="brand-grad-2">feito</span>.</h2>
+        <p class="mt-4 text-mute leading-relaxed">Rápido, prático e transparente. Você acompanha tudo ao vivo na sua tela.</p>
+      </div>
+      <div class="mt-4 hidden lg:block h-px step-line"></div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 rise">
+        <div class="card rounded-2xl p-6"><span class="font-display font-black text-3xl brand-grad-2">01</span><span class="icon-box w-10 h-10 rounded-xl flex items-center justify-center mt-4"><i data-lucide="credit-card" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">Escolha do plano</h3><p class="mt-2 text-sm text-mute">Selecione o nível ideal para o seu computador.</p></div>
+        <div class="card rounded-2xl p-6"><span class="font-display font-black text-3xl brand-grad-2">02</span><span class="icon-box w-10 h-10 rounded-xl flex items-center justify-center mt-4"><i data-lucide="search" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">Diagnóstico rápido</h3><p class="mt-2 text-sm text-mute">Analisamos seu PC e identificamos gargalos reais.</p></div>
+        <div class="card rounded-2xl p-6"><span class="font-display font-black text-3xl brand-grad-2">03</span><span class="icon-box w-10 h-10 rounded-xl flex items-center justify-center mt-4"><i data-lucide="monitor" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">Conexão via AnyDesk</h3><p class="mt-2 text-sm text-mute">Você acompanha tudo ao vivo, com total transparência.</p></div>
+        <div class="card rounded-2xl p-6"><span class="font-display font-black text-3xl brand-grad-2">04</span><span class="icon-box w-10 h-10 rounded-xl flex items-center justify-center mt-4"><i data-lucide="headphones" class="w-5 h-5"></i></span><h3 class="mt-4 font-display font-bold text-white">PC otimizado + suporte</h3><p class="mt-2 text-sm text-mute">Serviço finalizado com 30 dias de suporte.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="planos" class="py-20 md:py-28 border-t border-white/10 relative overflow-hidden">
+    <div class="hero-glow-a absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] pointer-events-none"></div>
+    <div class="relative max-w-6xl mx-auto px-5">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-[11px] font-mono text-primary uppercase tracking-[0.25em]">05 / Planos</p>
+        <h2 class="mt-3 font-display text-3xl md:text-[2.75rem] font-extrabold tracking-tight text-white leading-tight">Escolha o nível ideal de <span class="brand-grad-2">desempenho</span>.</h2>
+        <p class="mt-4 text-mute leading-relaxed">Pagamento único, à vista no Pix. Sem mensalidade. Suporte válido por 30 dias após a finalização.</p>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-3 gap-3 max-w-4xl mx-auto rise">
+        <div class="card rounded-2xl p-4 flex items-center gap-3"><span class="font-display font-black text-primary">1</span><p class="text-xs text-mute"><strong class="text-white block text-[13px]">Escolha o plano</strong>Clique em comprar no ideal para você</p></div>
+        <div class="card rounded-2xl p-4 flex items-center gap-3"><span class="font-display font-black text-primary">2</span><p class="text-xs text-mute"><strong class="text-white block text-[13px]">Pague via Pix</strong>QR Code ou copia e cola</p></div>
+        <div class="card rounded-2xl p-4 flex items-center gap-3"><span class="font-display font-black text-primary">3</span><p class="text-xs text-mute"><strong class="text-white block text-[13px]">Envie o comprovante</strong>Agendamos pelo WhatsApp</p></div>
+      </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-5 items-stretch max-w-5xl mx-auto rise">
+        <div class="card rounded-3xl flex flex-col overflow-hidden">
+          <div class="relative h-48 shrink-0 overflow-hidden plan-banner plan-essencial">
+            <div class="absolute inset-0 grid-bg opacity-70"></div>
+            <div class="absolute -right-10 -top-12 w-52 h-52 rounded-full bg-primary/20 blur-2xl"></div>
+            <div class="absolute -left-8 -bottom-14 w-44 h-44 rounded-full bg-deepblue/20 blur-2xl"></div>
+            <div class="relative h-full flex flex-col justify-center gap-3 px-6">
+              <span class="flex items-center shrink-0" style="filter:drop-shadow(0 0 14px rgba(0,210,255,.55))">
+                <img src="assets/icons/windows.svg" alt="" aria-hidden="true" class="w-11 h-11 text-primary" style="color:#00d2ff" />
+              </span>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">Otimização</p>
+                <p class="font-display text-xl font-black text-white leading-tight mt-1 tracking-tight">ESSENCIAL</p>
+                <p class="mt-1.5 font-display text-[10px] font-bold tracking-widest text-white/60">OTIMIZA <span class="text-primary">AÍ</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-display text-lg font-bold text-white">Essencial</h3>
+            <p class="mt-1 text-sm text-mute">Otimização completa do Windows.</p>
+            <div class="mt-6 flex items-baseline gap-1.5 font-mono"><span class="text-mute text-sm">R$</span><span class="text-5xl font-bold text-white">34,99</span></div>
+            <p class="mt-1.5 text-[11px] font-mono uppercase tracking-widest text-primary/80">à vista no Pix • parcela única</p>
+            <ul class="mt-7 space-y-3 flex-1 text-sm text-mute">
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Otimização completa do Windows</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Driver de vídeo limpo e atualizado</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Limpeza profunda do sistema</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Debloat do Windows</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Suporte prioritário por 30 dias</li>
+            </ul>
+            <button onclick="addToCart('Otimização Essencial',34.99)" class="btn-ghost mt-8 h-12 rounded-xl font-semibold">Comprar agora</button>
+          <a href="https://wa.me/5511953347495?text=Ol%C3%A1!%20Quero%20comprar%20o%20plano%20Otimiza%C3%A7%C3%A3o%20Essencial%20(R%24%2034%2C99)%20com%20a%20ajuda%20de%20um%20especialista." target="_blank" rel="noopener" class="mt-3 block text-center text-xs text-mute hover:text-primary transition-colors">Prefere ajuda? <span class="underline">Comprar com especialista</span></a>
+          </div>
+        </div>
+        <div class="card plan-pop rounded-3xl flex flex-col overflow-hidden relative md:-my-3">
+          <span class="absolute top-4 left-1/2 -translate-x-1/2 z-10 px-4 py-1 rounded-full bg-gradient-to-r from-primary to-deepblue text-bg text-[11px] font-mono font-bold uppercase tracking-widest whitespace-nowrap pop-badge">Mais popular</span>
+          <div class="relative h-48 shrink-0 overflow-hidden plan-banner plan-elite">
+            <div class="absolute inset-0 grid-bg opacity-70"></div>
+            <div class="absolute -right-10 -top-12 w-52 h-52 rounded-full bg-primary/25 blur-2xl"></div>
+            <div class="absolute -left-8 -bottom-14 w-44 h-44 rounded-full bg-violet/25 blur-2xl"></div>
+            <div class="relative h-full flex flex-col justify-center gap-3 px-6">
+              <span class="flex items-center gap-2.5 shrink-0" style="filter:drop-shadow(0 0 14px rgba(155,48,255,.55))">
+                <img src="assets/icons/windows.svg" alt="" aria-hidden="true" class="w-10 h-10" style="color:#a855f7" />
+                <span class="font-display font-black text-lg" style="color:#a855f7">+</span>
+                <span class="w-11 h-11 rounded-full flex items-center justify-center shrink-0" style="background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.4);box-shadow:0 0 16px rgba(168,85,247,.3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" style="color:#c084fc" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span>
+              </span>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">Otimização</p>
+                <p class="font-display text-xl font-black text-white leading-tight mt-1 tracking-tight">ELITE</p>
+                <p class="mt-1.5 font-display text-[10px] font-bold tracking-widest text-white/60">OTIMIZA <span class="text-primary">AÍ</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-1 md:pb-11">
+            <h3 class="font-display text-lg font-bold text-white">Elite</h3>
+            <p class="mt-1 text-sm text-mute">Essencial + formatação completa.</p>
+            <div class="mt-6 flex items-baseline gap-1.5 font-mono"><span class="text-mute text-sm">R$</span><span class="text-5xl font-bold brand-grad">59,99</span></div>
+            <p class="mt-1.5 text-[11px] font-mono uppercase tracking-widest text-primary">à vista no Pix • parcela única</p>
+            <ul class="mt-7 space-y-3 flex-1 text-sm text-fg">
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Tudo do Essencial</li>
+              <li class="flex gap-2.5"><span class="w-5 h-5 rounded-md bg-primary/15 border border-primary/40 flex items-center justify-center shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-primary" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span><strong class="text-white">Formatação completa do PC</strong></span></li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Instalação limpa do Windows</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Drivers reinstalados do zero</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Suporte prioritário por 30 dias</li>
+            </ul>
+            <button onclick="addToCart('Otimização Elite',59.99)" class="brand-btn mt-8 h-12 rounded-xl">Comprar agora</button>
+          <a href="https://wa.me/5511953347495?text=Ol%C3%A1!%20Quero%20comprar%20o%20plano%20Otimiza%C3%A7%C3%A3o%20Elite%20(R%24%2059%2C99)%20com%20a%20ajuda%20de%20um%20especialista." target="_blank" rel="noopener" class="mt-3 block text-center text-xs text-mute hover:text-primary transition-colors">Prefere ajuda? <span class="underline">Comprar com especialista</span></a>
+          </div>
+        </div>
+        <div class="card rounded-3xl flex flex-col overflow-hidden">
+          <div class="relative h-48 shrink-0 overflow-hidden plan-banner plan-performance">
+            <div class="absolute inset-0 grid-bg opacity-70"></div>
+            <div class="absolute -right-10 -top-12 w-52 h-52 rounded-full bg-violet/25 blur-2xl"></div>
+            <div class="absolute -left-8 -bottom-14 w-44 h-44 rounded-full bg-primary/20 blur-2xl"></div>
+            <div class="relative h-full flex flex-col justify-center gap-3 px-6">
+              <span class="flex items-center gap-1.5 shrink-0" style="filter:drop-shadow(0 0 14px rgba(0,210,255,.5))">
+                <span class="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style="background:rgba(0,210,255,.1);border:1px solid rgba(0,210,255,.4);box-shadow:0 0 16px rgba(0,210,255,.3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" style="color:#00d2ff" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
+                <span class="font-display font-black text-base text-primary">+</span>
+                <img src="assets/icons/windows.svg" alt="" aria-hidden="true" class="w-8 h-8" style="color:#0070f3" />
+                <span class="font-display font-black text-base text-primary">+</span>
+                <span class="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style="background:rgba(0,210,255,.1);border:1px solid rgba(0,210,255,.4);box-shadow:0 0 16px rgba(0,210,255,.3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" style="color:#00d2ff" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span>
+              </span>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">Otimização</p>
+                <p class="font-display text-xl font-black text-white leading-tight mt-1 tracking-tight">PERFORMANCE</p>
+                <p class="mt-1.5 font-display text-[10px] font-bold tracking-widest text-white/60">OTIMIZA <span class="text-primary">AÍ</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-display text-lg font-bold text-white">Performance</h3>
+            <p class="mt-1 text-sm text-mute">Máximo desempenho, com BIOS.</p>
+            <div class="mt-6 flex items-baseline gap-1.5 font-mono"><span class="text-mute text-sm">R$</span><span class="text-5xl font-bold text-white">99,99</span></div>
+            <p class="mt-1.5 text-[11px] font-mono uppercase tracking-widest text-primary/80">à vista no Pix • parcela única</p>
+            <ul class="mt-7 space-y-3 flex-1 text-sm text-mute">
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Tudo do Elite</li>
+              <li class="flex gap-2.5"><span class="w-5 h-5 rounded-md bg-violet/15 border border-violet/40 flex items-center justify-center shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-violet" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span><span><strong class="text-white">Ajustes de BIOS</strong></span></li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Ajustes finos de CPU e GPU</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Otimização personalizada por hardware</li>
+              <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>Suporte prioritário por 30 dias</li>
+            </ul>
+            <button onclick="addToCart('Otimização Performance',99.99)" class="btn-ghost mt-8 h-12 rounded-xl font-semibold">Comprar agora</button>
+          <a href="https://wa.me/5511953347495?text=Ol%C3%A1!%20Quero%20comprar%20o%20plano%20Otimiza%C3%A7%C3%A3o%20Performance%20(R%24%2099%2C99)%20com%20a%20ajuda%20de%20um%20especialista." target="_blank" rel="noopener" class="mt-3 block text-center text-xs text-mute hover:text-primary transition-colors">Prefere ajuda? <span class="underline">Comprar com especialista</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-mute">
+        <span class="inline-flex items-center gap-2"><i data-lucide="qr-code" class="w-4 h-4 text-primary"></i>Pix com QR Code ou copia e cola</span>
+        <span class="inline-flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4 text-primary"></i>Comprovante pelo WhatsApp</span>
+        <span class="inline-flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-primary"></i>Suporte prioritário incluso</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 md:py-28 border-t border-white/10 bg-surface/40">
+    <div class="max-w-3xl mx-auto px-5">
+      <p class="text-[11px] font-mono text-primary uppercase tracking-[0.25em]">06 / FAQ</p>
+      <h2 class="mt-3 font-display text-3xl md:text-[2.75rem] font-extrabold tracking-tight text-white">Perguntas <span class="brand-grad-2">frequentes</span>.</h2>
+      <div class="mt-8 relative">
+        <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-mute"></i>
+        <input id="faqSearch" type="text" placeholder="Buscar dúvida (ex: ban, trabalho, bios, anydesk...)" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-card border border-white/10 text-fg placeholder-mute/70 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm" />
+      </div>
+      <div class="mt-6 space-y-3" id="faqList">
+        <details class="group card rounded-xl p-5" open><summary class="font-medium text-white flex items-center justify-between gap-4">Posso ser banido usando a otimização?<i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180 shrink-0"></i></summary><p class="mt-3 text-sm text-mute leading-relaxed">Não. Nossos ajustes são 100% seguros contra sistemas anti-cheat (Vanguard, Easy Anti-Cheat, BattlEye). Não alteramos arquivos de jogos.</p></details>
+        <details class="group card rounded-xl p-5"><summary class="font-medium text-white flex items-center justify-between gap-4">Funciona para trabalho?<i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180 shrink-0"></i></summary><p class="mt-3 text-sm text-mute leading-relaxed">Sim. Otimizamos memória, boot e multitarefa para uso profissional e dia a dia.</p></details>
+        <details class="group card rounded-xl p-5"><summary class="font-medium text-white flex items-center justify-between gap-4">Preciso acessar a BIOS?<i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180 shrink-0"></i></summary><p class="mt-3 text-sm text-mute leading-relaxed">Algumas otimizações avançadas podem sugerir ajustes na BIOS, mas são opcionais e guiadas passo a passo.</p></details>
+        <details class="group card rounded-xl p-5"><summary class="font-medium text-white flex items-center justify-between gap-4">Como funciona o AnyDesk?<i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180 shrink-0"></i></summary><p class="mt-3 text-sm text-mute leading-relaxed">Você baixa o AnyDesk, nos envia o código e acompanha todo o serviço ao vivo na sua tela.</p></details>
+        <details class="group card rounded-xl p-5"><summary class="font-medium text-white flex items-center justify-between gap-4">Quais formas de pagamento?<i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180 shrink-0"></i></summary><p class="mt-3 text-sm text-mute leading-relaxed">Pix, via QR Code ou copia e cola. Após pagar, envie o comprovante pelo WhatsApp.</p></details>
+        <details class="group card rounded-xl p-5"><summary class="font-medium text-white flex items-center justify-between gap-4">Qual a diferença entre os planos?<i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180 shrink-0"></i></summary><p class="mt-3 text-sm text-mute leading-relaxed">Todos incluem otimização do Windows, driver limpo, limpeza, debloat e suporte prioritário. O Elite adiciona a formatação completa, e só o Performance inclui ajustes de BIOS.</p></details>
+        <details class="group card rounded-xl p-5"><summary class="font-medium text-white flex items-center justify-between gap-4">Atende todo o Brasil?<i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180 shrink-0"></i></summary><p class="mt-3 text-sm text-mute leading-relaxed">Sim, atendimento remoto via AnyDesk em todo o Brasil.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-28 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/10 via-surface to-violet/10 p-10 md:p-16">
+        <div class="hero-glow-a absolute -top-20 -right-20 w-96 h-96 pointer-events-none"></div>
+        <div class="relative max-w-2xl">
+          <p class="text-[11px] font-mono text-primary uppercase tracking-[0.25em]">Comece agora</p>
+          <h2 class="mt-3 font-display text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">Pronto para liberar o <span class="brand-grad">verdadeiro potencial</span> do seu PC?</h2>
+          <p class="mt-4 text-mute leading-relaxed">Pare de aceitar travamentos e lentidão. Escolha seu plano e fale com um especialista no WhatsApp.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#planos" class="brand-btn inline-flex items-center h-12 px-7 rounded-xl">Otimizar meu PC agora</a>
+            <a href="https://wa.me/5511953347495?text=Ol%C3%A1!%20Quero%20otimizar%20meu%20PC." target="_blank" rel="noopener" class="btn-ghost inline-flex items-center h-12 px-7 rounded-xl font-semibold">Falar com especialista</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-surface/60 py-14">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-10 text-sm">
+      <div>
+        <a href="#inicio" class="flex items-center gap-3">
+          <span class="logo-round"><img src="logo.jpg" alt="Otimiza aí" /></span>
+          <span class="font-display font-extrabold text-lg text-white">Otimiza <span class="text-primary">aí</span></span>
+        </a>
+        <p class="mt-4 text-mute leading-relaxed">Otimizações de sistema feitas à mão para jogos e trabalho, via AnyDesk.</p>
+      </div>
+      <div>
+        <p class="font-mono text-[11px] text-mute uppercase tracking-[0.25em]">Navegação</p>
+        <ul class="mt-4 space-y-2.5 text-mute">
+          <li><a href="#servicos" class="hover:text-primary transition-colors">Serviços</a></li>
+          <li><a href="#jogos" class="hover:text-primary transition-colors">Jogos</a></li>
+          <li><a href="#processo" class="hover:text-primary transition-colors">Como funciona</a></li>
+          <li><a href="#planos" class="hover:text-primary transition-colors">Planos</a></li>
+          <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-mono text-[11px] text-mute uppercase tracking-[0.25em]">Contato</p>
+        <p class="mt-4 text-mute">Segunda a sexta, 13h às 00h<br />Sábado e domingo, 10h às 00h</p>
+        <a href="https://wa.me/5511953347495" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2.5 rounded-xl border border-emerald-500/30 bg-emerald-950/30 px-3.5 py-2.5 hover:border-emerald-400 transition-colors">
+          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="h-5 w-auto" />
+          <span><span class="block text-[9px] font-mono uppercase text-emerald-400">WhatsApp oficial</span><span class="font-bold text-sm text-white">+55 11 95334-7495</span></span>
+        </a>
+        <a href="https://discord.gg/dtKNEkcsA" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2.5 rounded-xl border border-[#5865F2]/40 bg-[#5865F2]/10 px-3.5 py-2.5 hover:border-[#5865F2] transition-colors">
+          <img src="assets/icons/discord.svg" alt="Discord" class="h-5 w-auto" style="color:#5865F2" />
+          <span><span class="block text-[9px] font-mono uppercase" style="color:#8b96f8">Servidor no Discord</span><span class="font-bold text-sm text-white">Entrar na comunidade</span></span>
+        </a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-5 mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-mute">
+      <p>Otimiza aí, 2026. Todos os direitos reservados.</p>
+      <p class="flex items-center gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 text-primary"></i>Alta performance • 100% seguro • AnyDesk oficial</p>
+    </div>
+  </footer>
+
+  <!-- Discord float -->
+  <aside class="fixed bottom-[72px] right-4 z-50 flex items-center group">
+    <div class="hidden sm:block mr-2 px-2.5 py-1 rounded-lg bg-slate-900/90 border border-[#5865F2]/40 text-xs font-semibold text-[#b3baff] shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+      Entrar no Discord
+    </div>
+    <a href="https://discord.gg/dtKNEkcsA" target="_blank" rel="noopener" aria-label="Servidor no Discord" class="w-12 h-12 rounded-full bg-[#5865F2] text-white flex items-center justify-center text-2xl transition-transform hover:-translate-y-1 hover:scale-105" style="box-shadow:0 0 20px rgba(88,101,242,.4),0 10px 25px -5px rgba(0,0,0,.5)">
+      <img src="assets/icons/discord.svg" alt="" aria-hidden="true" class="w-6 h-6" />
+    </a>
+  </aside>
+
+  <!-- WhatsApp float -->
+  <button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo" class="fixed bottom-[136px] right-4 z-50 w-12 h-12 rounded-full border border-white/15 bg-surface/90 backdrop-blur text-mute hover:text-primary hover:border-primary/50 transition-colors flex items-center justify-center">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+  <aside class="fixed bottom-4 right-4 z-50 flex items-center group">
+    <div class="hidden sm:block mr-2 px-2.5 py-1 rounded-lg bg-slate-900/90 border border-emerald-500/40 text-xs font-semibold text-emerald-300 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      Falar no WhatsApp agora
+    </div>
+    <a href="https://wa.me/5511953347495?text=Ol%C3%A1!%20Quero%20otimizar%20meu%20PC." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" class="whatsapp-float-btn w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+  </aside>
+
+  <!-- Cart / Checkout -->
+  <div id="cartOverlay" class="hidden fixed inset-0 z-[70] bg-black/70 backdrop-blur-sm" onclick="closeCart()"></div>
+  <aside id="cartDrawer" class="fixed top-0 right-0 z-[71] h-full w-full max-w-md bg-surface border-l border-white/10 flex flex-col" role="dialog" aria-modal="true" aria-label="Carrinho de compras">
+    <div class="flex items-center gap-3 px-5 h-[72px] border-b border-white/10 shrink-0">
+      <span class="w-9 h-9 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0"><i data-lucide="shopping-cart" class="w-4 h-4 text-primary"></i></span>
+      <div class="flex-1 min-w-0">
+        <h3 class="font-display font-bold text-white leading-tight">Seu pedido</h3>
+        <p class="text-[11px] font-mono text-mute">Carrinho seguro via Pix</p>
+      </div>
+      <button onclick="closeCart()" class="w-9 h-9 rounded-lg border border-white/10 text-mute hover:text-white hover:border-white/30 transition-colors text-sm font-medium shrink-0" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div class="px-5 pt-4 flex items-center gap-1.5 text-[11px] font-medium shrink-0">
+      <span id="cs1" class="flex items-center gap-1.5 text-primary"><span class="w-5 h-5 rounded-full bg-primary text-bg text-[10px] font-bold flex items-center justify-center">1</span>Carrinho</span>
+      <span class="flex-1 h-px bg-white/10"></span>
+      <span id="cs2" class="flex items-center gap-1.5 text-mute"><span class="w-5 h-5 rounded-full border border-white/20 text-[10px] font-bold flex items-center justify-center">2</span>Você e PC</span>
+      <span class="flex-1 h-px bg-white/10"></span>
+      <span id="cs3" class="flex items-center gap-1.5 text-mute"><span class="w-5 h-5 rounded-full border border-white/20 text-[10px] font-bold flex items-center justify-center">3</span>Pagamento</span>
+    </div>
+    <div id="cartView" class="flex-1 overflow-y-auto px-5 py-4">
+      <div id="cartEmpty" class="h-full flex flex-col items-center justify-center text-center py-10">
+        <span class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center"><i data-lucide="shopping-cart" class="w-6 h-6 text-mute"></i></span>
+        <p class="mt-4 font-display font-bold text-white">Carrinho vazio</p>
+        <p class="mt-1 text-sm text-mute">Escolha um plano para começar.</p>
+        <button onclick="closeCart();document.querySelector('#planos').scrollIntoView({behavior:'smooth'})" class="brand-btn mt-6 h-11 px-6 rounded-xl text-sm">Ver planos</button>
+      </div>
+      <div id="cartItems" class="space-y-3"></div>
+    </div>
+    <div id="cartFooter" class="hidden border-t border-white/10 px-5 py-4 shrink-0">
+      <div class="flex items-center justify-between text-sm"><span class="text-mute">Subtotal</span><span class="font-mono font-bold text-white text-lg" id="cartTotal">R$ 0,00</span></div>
+      <p class="mt-1 text-[11px] text-mute">Pagamento único, à vista no Pix. Sem mensalidade.</p>
+      <button onclick="goCheckout()" class="brand-btn mt-4 w-full h-12 rounded-xl">Finalizar pedido</button>
+      <a href="https://wa.me/5511953347495?text=Ol%C3%A1!%20Quero%20finalizar%20minha%20compra%20com%20a%20ajuda%20de%20um%20especialista." target="_blank" rel="noopener" class="mt-2.5 block text-center text-xs text-mute hover:text-primary transition-colors">ou <span class="underline">comprar com especialista</span></a>
+    </div>
+    <div id="checkoutView" class="hidden flex-1 overflow-y-auto px-5 py-4">
+      <button onclick="showCartView()" class="inline-flex items-center gap-1.5 text-xs text-mute hover:text-white transition-colors"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>voltar ao carrinho</button>
+      <div class="mt-3 rounded-xl border border-white/10 bg-bg p-4">
+        <p class="text-[11px] font-mono uppercase tracking-widest text-mute">Resumo do pedido</p>
+        <div id="orderItems" class="mt-2 space-y-1.5 text-sm"></div>
+        <div class="mt-3 pt-3 border-t border-white/10 flex items-center justify-between"><span class="text-sm text-mute">Total</span><span class="font-mono font-bold text-white text-xl" id="orderTotal"></span></div>
+      </div>
+      <div id="checkoutForm" class="mt-4">
+        <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="custName">Seu nome</label>
+        <input id="custName" type="text" placeholder="Ex: Bruno Silva" autocomplete="name" class="mt-1.5 w-full px-4 py-3 rounded-xl bg-bg border border-white/10 text-fg placeholder-mute/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm" />
+        <label class="mt-4 block text-[11px] font-mono uppercase tracking-widest text-mute" for="custPhone">Seu WhatsApp</label>
+        <input id="custPhone" type="tel" inputmode="tel" placeholder="(11) 99999-9999" autocomplete="tel" class="mt-1.5 w-full px-4 py-3 rounded-xl bg-bg border border-white/10 text-fg placeholder-mute/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm" />
+        <p class="mt-5 mb-1 text-[11px] font-mono uppercase tracking-widest text-primary">Peças do seu PC</p>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="col-span-1">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="specCpu">Processador</label>
+            <input id="specCpu" type="text" placeholder="Ex: Ryzen 5 5600" class="mt-1.5 w-full px-3 py-2.5 rounded-xl bg-bg border border-white/10 text-fg placeholder-mute/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm" />
+          </div>
+          <div class="col-span-1">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="specGpu">Placa de vídeo</label>
+            <input id="specGpu" type="text" placeholder="Ex: RTX 3060" class="mt-1.5 w-full px-3 py-2.5 rounded-xl bg-bg border border-white/10 text-fg placeholder-mute/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm" />
+          </div>
+          <div class="col-span-1">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="specRam">RAM</label>
+            <select id="specRam" class="mt-1.5 w-full px-3 py-2.5 rounded-xl bg-bg border border-white/10 text-fg focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm">
+              <option value="">Selecione...</option>
+              <option>4 GB</option><option>8 GB</option><option>12 GB</option><option>16 GB</option><option>32 GB</option><option>64 GB ou mais</option>
+            </select>
+          </div>
+          <div class="col-span-1">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="specDisk">Armazenamento</label>
+            <select id="specDisk" class="mt-1.5 w-full px-3 py-2.5 rounded-xl bg-bg border border-white/10 text-fg focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm">
+              <option value="">Selecione...</option>
+              <option>HD</option><option>SSD</option><option>SSD NVMe</option><option>HD + SSD</option>
+            </select>
+          </div>
+          <div class="col-span-1">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="specUse">Uso principal</label>
+            <select id="specUse" class="mt-1.5 w-full px-3 py-2.5 rounded-xl bg-bg border border-white/10 text-fg focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm">
+              <option value="">Selecione...</option>
+              <option>Jogos competitivos</option><option>Jogos casuais</option><option>Trabalho / estudo</option><option>Edição de vídeo / design</option><option>Uso geral</option>
+            </select>
+          </div>
+          <div class="col-span-1">
+            <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="specGame">Jogo principal</label>
+            <input id="specGame" type="text" placeholder="Ex: Valorant" class="mt-1.5 w-full px-3 py-2.5 rounded-xl bg-bg border border-white/10 text-fg placeholder-mute/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm" />
+          </div>
+        </div>
+        <div class="mt-3">
+          <label class="text-[11px] font-mono uppercase tracking-widest text-mute" for="specIssue">O que está acontecendo? <span class="normal-case tracking-normal">(opcional)</span></label>
+          <textarea id="specIssue" rows="2" placeholder="Ex: FPS baixo, PC demora para ligar..." class="mt-1.5 w-full px-3 py-2.5 rounded-xl bg-bg border border-white/10 text-fg placeholder-mute/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 text-base sm:text-sm resize-none"></textarea>
+        </div>
+        <p id="checkoutErr" class="hidden mt-2 text-xs text-red-400"></p>
+        <button onclick="genOrderPix()" class="brand-btn mt-4 w-full h-12 rounded-xl">Gerar Pix do pedido</button>
+      </div>
+      <div id="payBlock" class="hidden mt-4">
+        <div class="flex items-baseline gap-2">
+          <span class="font-mono text-3xl font-bold text-white" id="pixAmount"></span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-primary">à vista</span>
+          <span class="ml-auto text-[11px] font-mono text-mute" id="pixOrder"></span>
+        </div>
+        <div class="mt-3 rounded-xl border border-emerald-500/25 bg-emerald-950/20 p-3.5 flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center shrink-0"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i></span>
+          <div class="min-w-0">
+            <p class="text-[11px] text-mute">Você está pagando para</p>
+            <p class="text-sm font-bold text-white flex items-center gap-1.5">Otimiza Aí <i data-lucide="badge-check" class="w-4 h-4 text-primary shrink-0"></i></p>
+            <p class="text-[11px] font-mono text-mute">Chave Pix (CPF) •••.657.177-••</p>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-2 gap-1 p-1 rounded-xl bg-bg border border-white/10">
+          <button id="tabBtnQr" onclick="pixTab('qr')" class="h-9 rounded-lg text-sm font-semibold bg-primary/15 text-primary border border-primary/30 transition-colors">QR Code</button>
+          <button id="tabBtnCode" onclick="pixTab('code')" class="h-9 rounded-lg text-sm font-semibold text-mute hover:text-white transition-colors">Copia e cola</button>
+        </div>
+        <div id="pixTabQr" class="mt-4 flex flex-col items-center">
+          <div class="rounded-2xl bg-white p-3.5 shadow-[0_0_30px_rgba(0,210,255,.25)]" style="min-width:238px;min-height:238px;display:flex;align-items:center;justify-content:center">
+            <div id="pixQrBox" class="leading-none"></div>
+          </div>
+          <p class="mt-3 text-xs text-mute text-center">Abra o app do banco, escolha <strong class="text-white">pagar com QR Code</strong> e escaneie.</p>
+        </div>
+        <div id="pixTabCode" class="hidden mt-4">
+          <label class="text-[11px] font-mono text-mute uppercase tracking-widest">Código copia e cola</label>
+          <div class="mt-2 flex items-center gap-2">
+            <input id="pixCode" readonly class="flex-1 min-w-0 bg-bg border border-white/10 rounded-lg px-3 py-2.5 text-xs font-mono text-mute truncate" />
+            <button id="copyBtn" onclick="copyPix()" class="h-10 px-4 rounded-lg border border-primary/40 text-primary text-sm font-semibold hover:bg-primary/10 transition-colors shrink-0">copiar</button>
+          </div>
+          <p class="mt-2 text-xs text-mute">Chave Pix (CPF): <span class="text-fg font-mono">194.657.177-62</span></p>
+          <p class="mt-1.5 text-xs text-mute">Confira o valor exato antes de confirmar no banco.</p>
+        </div>
+        <a id="pixWa" href="#" target="_blank" rel="noopener" class="mt-6 w-full inline-flex items-center justify-center gap-2 h-12 rounded-xl bg-[#25D366] text-white font-bold hover:opacity-90 transition-opacity">Já paguei, enviar comprovante</a>
+        <button onclick="editOrderData()" class="mt-2.5 w-full h-10 rounded-xl text-sm text-mute hover:text-white transition-colors">editar meus dados</button>
+        <div class="mt-3 pt-3 border-t border-white/10 flex items-center justify-center gap-4 text-[11px] text-mute">
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="lock" class="w-3.5 h-3.5 text-primary"></i>Ambiente seguro</span>
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="landmark" class="w-3.5 h-3.5 text-primary"></i>Pix oficial</span>
+          <span class="inline-flex items-center gap-1.5"><i data-lucide="receipt-text" class="w-3.5 h-3.5 text-primary"></i>Suporte 30 dias</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[80] px-4 py-3 rounded-xl bg-card border border-primary/40 text-sm text-white shadow-2xl whitespace-nowrap max-w-[92vw] overflow-hidden text-ellipsis"></div>
+
+  <script>
+    lucide.createIcons();
+
+    // header shadow + back-to-top on scroll
+    (function(){
+      var header = document.getElementById('siteHeader');
+      var toTop = document.getElementById('toTop');
+      function onScroll(){
+        var y = window.scrollY || document.documentElement.scrollTop;
+        if(header){ header.classList.toggle('scrolled', y > 8); }
+        if(toTop){ toTop.classList.toggle('show', y > 600); }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+    })();
+
+    // reveal on scroll
+    (function(){
+      var els = document.querySelectorAll('section');
+      els.forEach(function(el){ el.classList.add('reveal'); });
+      var hero = document.querySelector('#inicio');
+      if(hero){ hero.classList.add('show'); }
+      if(!('IntersectionObserver' in window)){ els.forEach(function(el){ el.classList.add('show'); }); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }});
+      },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+      els.forEach(function(el){ if(el.id!=='inicio') io.observe(el); });
+    })();
+
+    // mobile menu
+    (function(){
+      var btn = document.getElementById('menuBtn');
+      var menu = document.getElementById('mobileMenu');
+      if(!btn || !menu) return;
+      var icoOpen = document.getElementById('menuIcoOpen');
+      var icoClose = document.getElementById('menuIcoClose');
+      function setOpen(open){
+        menu.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+        if(icoOpen){ icoOpen.classList.toggle('hidden', open); }
+        if(icoClose){ icoClose.classList.toggle('hidden', !open); }
+      }
+      btn.addEventListener('click', function(){ setOpen(!menu.classList.contains('open')); });
+      menu.querySelectorAll('.mob-link').forEach(function(a){
+        a.addEventListener('click', function(){ setOpen(false); });
+      });
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ setOpen(false); } });
+    })();
+
+    // pc specs
+    function getSpecs(){
+      return {
+        cpu: document.getElementById('specCpu').value.trim(),
+        gpu: document.getElementById('specGpu').value.trim(),
+        ram: document.getElementById('specRam').value,
+        disk: document.getElementById('specDisk').value,
+        use: document.getElementById('specUse').value,
+        game: document.getElementById('specGame').value.trim(),
+        issue: document.getElementById('specIssue').value.trim()
+      };
+    }
+    function specsText(s){
+      var parts = [];
+      if(s.cpu){ parts.push('CPU: ' + s.cpu); }
+      if(s.gpu){ parts.push('GPU: ' + s.gpu); }
+      if(s.ram){ parts.push('RAM: ' + s.ram); }
+      if(s.disk){ parts.push('Armazenamento: ' + s.disk); }
+      if(s.use){ parts.push('Uso: ' + s.use); }
+      if(s.game){ parts.push('Jogo: ' + s.game); }
+      if(s.issue){ parts.push('Problema: ' + s.issue); }
+      return parts.join('\n• ');
+    }
+    (function(){
+      try{
+        var s = JSON.parse(localStorage.getItem('oa_specs_v1') || 'null');
+        if(!s){ return; }
+        if(s.cpu){ document.getElementById('specCpu').value = s.cpu; }
+        if(s.gpu){ document.getElementById('specGpu').value = s.gpu; }
+        if(s.ram){ document.getElementById('specRam').value = s.ram; }
+        if(s.disk){ document.getElementById('specDisk').value = s.disk; }
+        if(s.use){ document.getElementById('specUse').value = s.use; }
+        if(s.game){ document.getElementById('specGame').value = s.game; }
+        if(s.issue){ document.getElementById('specIssue').value = s.issue; }
+      }catch(e){}
+    })();
+
+    // faq search
+    (function(){
+      var input = document.getElementById('faqSearch');
+      var list = document.getElementById('faqList');
+      if(!input || !list) return;
+      input.addEventListener('input', function(){
+        var q = input.value.toLowerCase().trim();
+        list.querySelectorAll('details').forEach(function(d){
+          var t = d.innerText.toLowerCase();
+          d.style.display = (!q || t.includes(q)) ? '' : 'none';
+        });
+      });
+    })();
+
+    // pix
+    function crc16ccitt(str){var crc=0xffff;for(var i=0;i<str.length;i++){crc^=str.charCodeAt(i)<<8;for(var j=0;j<8;j++){if(crc&0x8000){crc=((crc<<1)^0x1021)&0xffff}else{crc=(crc<<1)&0xffff}}}return crc.toString(16).toUpperCase().padStart(4,'0');}
+    function buildPix(key,amount,txid){function f(id,v){return id+String(v.length).padStart(2,'0')+v}var mi='0014br.gov.bcb.pix'+f('01',key);var p='';p+='000201';p+=f('26',mi);p+='52040000';p+='5303986';p+=f('54',amount.toFixed(2));p+='5802BR';p+=f('59','OTIMIZA AI');p+=f('60','SAO PAULO');p+=f('62',f('05',txid));p+='6304';p+=crc16ccitt(p);return p;}
+    function renderQr(code){
+      var box = document.getElementById('pixQrBox');
+      box.innerHTML = '';
+      try{
+        if(typeof QRCode !== 'undefined'){
+          new QRCode(box, { text: code, width: 210, height: 210, correctLevel: QRCode.CorrectLevel.M });
+          return;
+        }
+      }catch(e){}
+      var im = document.createElement('img');
+      im.src = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&data=' + encodeURIComponent(code);
+      im.alt = 'QR Code Pix';
+      im.width = 210; im.height = 210;
+      box.appendChild(im);
+    }
+    // cart + orders
+    var PLAN_ICONS = {'Otimização Essencial':'monitor','Otimização Elite':'rocket','Otimização Performance':'gem'};
+    var cart = [];
+    try{ cart = JSON.parse(localStorage.getItem('oa_cart_v1') || '[]'); }catch(e){ cart = []; }
+    var currentOrder = null;
+    var toastT = null;
+    function brl(v){ return 'R$ ' + v.toFixed(2).replace('.', ','); }
+    function saveCart(){ try{ localStorage.setItem('oa_cart_v1', JSON.stringify(cart)); }catch(e){} }
+    function cartTotal(){ return cart.reduce(function(s, i){ return s + i.price; }, 0); }
+    function showToast(msg){
+      var t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.remove('hidden');
+      if(toastT){ clearTimeout(toastT); }
+      toastT = setTimeout(function(){ t.classList.add('hidden'); }, 2200);
+    }
+    function renderCart(){
+      var box = document.getElementById('cartItems');
+      var empty = document.getElementById('cartEmpty');
+      var foot = document.getElementById('cartFooter');
+      var count = document.getElementById('cartCount');
+      box.innerHTML = '';
+      if(!cart.length){
+        empty.style.display = '';
+        foot.classList.add('hidden');
+      }else{
+        empty.style.display = 'none';
+        foot.classList.remove('hidden');
+        cart.forEach(function(it){
+          var row = document.createElement('div');
+          row.className = 'rounded-xl border border-white/10 bg-bg p-4 flex items-center gap-3';
+          row.innerHTML = '<span class="icon-box w-10 h-10 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="' + (PLAN_ICONS[it.plan] || 'zap') + '" class="w-5 h-5"></i></span>' +
+            '<div class="flex-1 min-w-0"><p class="text-sm font-semibold text-white truncate">' + it.plan + '</p><p class="text-xs font-mono text-mute">' + brl(it.price) + ' à vista</p></div>' +
+            '<button onclick="removeFromCart(\'' + it.plan + '\')" class="w-9 h-9 rounded-lg border border-white/10 text-mute hover:text-red-400 hover:border-red-400/50 transition-colors flex items-center justify-center shrink-0" aria-label="Remover ' + it.plan + '"><i data-lucide="trash-2" class="w-4 h-4"></i></button>';
+          box.appendChild(row);
+        });
+      }
+      document.getElementById('cartTotal').textContent = brl(cartTotal());
+      if(count){
+        count.textContent = cart.length;
+        count.style.display = cart.length ? 'flex' : 'none';
+        count.classList.remove('bump'); void count.offsetWidth; count.classList.add('bump');
+      }
+      if(window.lucide){ lucide.createIcons(); }
+    }
+    function addToCart(plan, price){
+      if(!cart.some(function(i){ return i.plan === plan; })){
+        cart.push({ plan: plan, price: price });
+        saveCart();
+      }
+      renderCart();
+      openCart('cart');
+    }
+    function removeFromCart(plan){
+      cart = cart.filter(function(i){ return i.plan !== plan; });
+      saveCart();
+      renderCart();
+    }
+    function setStep(n){
+      var on = 'flex items-center gap-1.5 text-primary';
+      var off = 'flex items-center gap-1.5 text-mute';
+      var onB = 'w-5 h-5 rounded-full bg-primary text-bg text-[10px] font-bold flex items-center justify-center';
+      var offB = 'w-5 h-5 rounded-full border border-white/20 text-[10px] font-bold flex items-center justify-center';
+      for(var i = 1; i <= 3; i++){
+        var s = document.getElementById('cs' + i);
+        var active = i <= n;
+        s.className = active ? on : off;
+        s.querySelector('span').className = active ? onB : offB;
+      }
+    }
+    function openCart(){
+      document.getElementById('cartOverlay').classList.remove('hidden');
+      document.getElementById('cartDrawer').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      renderCart();
+    }
+    function closeCart(){
+      document.getElementById('cartOverlay').classList.add('hidden');
+      document.getElementById('cartDrawer').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function showCartView(){
+      document.getElementById('checkoutView').classList.add('hidden');
+      document.getElementById('cartView').classList.remove('hidden');
+      document.getElementById('cartFooter').classList.toggle('hidden', !cart.length);
+      setStep(1);
+    }
+    function goCheckout(){
+      if(!cart.length){ return; }
+      var box = document.getElementById('orderItems');
+      box.innerHTML = '';
+      cart.forEach(function(it){
+        var r = document.createElement('div');
+        r.className = 'flex items-center justify-between gap-2';
+        r.innerHTML = '<span class="text-mute">' + it.plan + '</span><span class="font-mono text-white">' + brl(it.price) + '</span>';
+        box.appendChild(r);
+      });
+      document.getElementById('orderTotal').textContent = brl(cartTotal());
+      document.getElementById('cartView').classList.add('hidden');
+      document.getElementById('cartFooter').classList.add('hidden');
+      document.getElementById('checkoutView').classList.remove('hidden');
+      setStep(2);
+    }
+    function genOrderPix(){
+      var name = document.getElementById('custName').value.trim();
+      var phone = document.getElementById('custPhone').value.replace(/\D/g, '');
+      var err = document.getElementById('checkoutErr');
+      if(name.length < 2){ err.textContent = 'Informe seu nome para gerar o pedido.'; err.classList.remove('hidden'); return; }
+      if(phone.length < 10){ err.textContent = 'Informe um WhatsApp válido com DDD.'; err.classList.remove('hidden'); return; }
+      err.classList.add('hidden');
+      var id = 'OA-' + Date.now().toString(36).toUpperCase().slice(-6);
+      var total = cartTotal();
+      var items = cart.map(function(i){ return i.plan; }).join(' + ');
+      currentOrder = { id: id, name: name, phone: phone, items: items, total: total };
+      var txid = id.replace(/[^A-Z0-9]/gi, '').toUpperCase();
+      var code = buildPix('19465717762', total, txid);
+      document.getElementById('pixAmount').textContent = brl(total);
+      document.getElementById('pixOrder').textContent = 'Pedido ' + id;
+      document.getElementById('pixCode').value = code;
+      renderQr(code);
+      var specSuffix = '';
+      try{
+        var sg = getSpecs();
+        try{ localStorage.setItem('oa_specs_v1', JSON.stringify(sg)); }catch(e2){}
+        var st = specsText(sg); if(st){ specSuffix = '\nMeu PC:\n• ' + st; }
+      }catch(e){}
+      document.getElementById('pixWa').href = 'https://wa.me/5511953347495?text=' + encodeURIComponent('Olá! Sou ' + name + ' (' + phone + '). Fiz o pedido ' + id + ': ' + items + ' — Total ' + brl(total) + ' via Pix.' + specSuffix + '\nSegue comprovante.');
+      var cb = document.getElementById('copyBtn'); if(cb){ cb.textContent = 'copiar'; }
+      pixTab('qr');
+      document.getElementById('checkoutForm').classList.add('hidden');
+      document.getElementById('payBlock').classList.remove('hidden');
+      setStep(3);
+    }
+    function editOrderData(){
+      document.getElementById('payBlock').classList.add('hidden');
+      document.getElementById('checkoutForm').classList.remove('hidden');
+      setStep(2);
+    }
+    function pixTab(which){
+      var isQr = which==='qr';
+      document.getElementById('pixTabQr').classList.toggle('hidden',!isQr);
+      document.getElementById('pixTabCode').classList.toggle('hidden',isQr);
+      var bQ=document.getElementById('tabBtnQr'), bC=document.getElementById('tabBtnCode');
+      var on='h-9 rounded-lg text-sm font-semibold bg-primary/15 text-primary border border-primary/30 transition-colors';
+      var off='h-9 rounded-lg text-sm font-semibold text-mute hover:text-white transition-colors';
+      bQ.className=isQr?on:off; bC.className=isQr?off:on;
+    }
+    function copyPix(){
+      var v=document.getElementById('pixCode').value;
+      var done=function(){ var cb=document.getElementById('copyBtn'); if(cb){cb.textContent='copiado!'; setTimeout(function(){cb.textContent='copiar'},2000);} };
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done).catch(function(){prompt('Copie o código:',v)})} else {prompt('Copie o código:',v)}
+    }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeCart(); } });
+    renderCart();
+  </script>
+</body>
+</html>
