@@ -99,7 +99,6 @@
 
     .logo-round{width:42px;height:42px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#00d2ff,#9b30ff);box-shadow:0 0 16px rgba(0,210,255,.45);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;transition:transform .3s}
     .logo-round:hover{transform:scale(1.08) rotate(3deg)}
-    .logo-round img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:#000}
     .plan-banner{position:relative;background:#070b14}
     .plan-essencial{background:radial-gradient(120% 130% at 85% 10%,rgba(0,210,255,.20),transparent 55%),radial-gradient(120% 130% at 10% 100%,rgba(0,112,243,.16),transparent 55%),#070b14}
     .plan-elite{background:radial-gradient(120% 130% at 85% 10%,rgba(0,210,255,.24),transparent 55%),radial-gradient(120% 130% at 10% 100%,rgba(155,48,255,.20),transparent 55%),#070b14}
@@ -185,11 +184,10 @@
   <!-- Header -->
   <header id="siteHeader" class="sticky top-0 z-50 bg-bg/90 backdrop-blur-xl border-b border-white/10">
     <div class="max-w-6xl mx-auto px-5 h-[72px] flex items-center justify-between gap-4">
-      <a href="#inicio" class="flex items-center gap-3 shrink-0">
-        <span class="logo-round"><img src="logo.jpg" alt="Otimiza aí" /></span>
-        <span class="font-display font-extrabold text-lg sm:text-xl text-white tracking-tight whitespace-nowrap">Otimiza <span class="text-primary">aí</span></span>
+      <a href="#inicio" class="flex items-center shrink-0" aria-label="Otimiza aí — início">
+        <img src="logo-full.png" alt="Otimiza aí Tweaks" class="h-12 w-auto object-contain" />
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm text-mute font-medium">
+      <nav class="hidden md:flex items-center gap-8 text-base text-mute font-medium">
         <a href="#servicos" class="hover:text-primary transition-colors">Serviços</a>
         <a href="#jogos" class="hover:text-primary transition-colors">Jogos</a>
         <a href="#processo" class="hover:text-primary transition-colors">Como funciona</a>
@@ -197,12 +195,12 @@
         <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
       </nav>
       <div class="flex items-center gap-2 shrink-0">
-        <a href="#planos" class="brand-btn hidden sm:inline-flex items-center h-10 px-4 sm:px-5 rounded-xl text-[13px] sm:text-sm whitespace-nowrap">Ver planos</a>
-        <button onclick="openCart()" class="relative w-10 h-10 rounded-xl border border-white/15 text-fg flex items-center justify-center hover:border-primary/50 transition-colors shrink-0" aria-label="Abrir carrinho">
-          <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+        <a href="#planos" class="brand-btn hidden sm:inline-flex items-center h-11 px-5 rounded-xl text-sm sm:text-[15px] font-bold whitespace-nowrap">Ver planos</a>
+        <button onclick="openCart()" class="relative w-11 h-11 rounded-xl border border-white/15 text-fg flex items-center justify-center hover:border-primary/50 transition-colors shrink-0" aria-label="Abrir carrinho">
+          <i data-lucide="shopping-cart" class="w-6 h-6"></i>
           <span id="cartCount" class="hidden absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-primary text-bg text-[11px] font-bold items-center justify-center">0</span>
         </button>
-      <button id="menuBtn" class="md:hidden w-10 h-10 rounded-xl border border-white/15 text-fg flex items-center justify-center hover:border-primary/50 transition-colors shrink-0" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
+      <button id="menuBtn" class="md:hidden w-11 h-11 rounded-xl border border-white/15 text-fg flex items-center justify-center hover:border-primary/50 transition-colors shrink-0" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu">
         <span id="menuIcoOpen"><i data-lucide="menu" class="w-5 h-5"></i></span>
         <span id="menuIcoClose" class="hidden"><i data-lucide="x" class="w-5 h-5"></i></span>
       </button>
@@ -532,9 +530,8 @@
   <footer class="border-t border-white/10 bg-surface/60 py-14">
     <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-10 text-sm">
       <div>
-        <a href="#inicio" class="flex items-center gap-3">
-          <span class="logo-round"><img src="logo.jpg" alt="Otimiza aí" /></span>
-          <span class="font-display font-extrabold text-lg text-white">Otimiza <span class="text-primary">aí</span></span>
+        <a href="#inicio" class="inline-block" aria-label="Otimiza aí — início">
+          <img src="logo-full.png" alt="Otimiza aí Tweaks" class="h-20 w-auto object-contain" />
         </a>
         <p class="mt-4 text-mute leading-relaxed">Otimizações de sistema feitas à mão para jogos e trabalho, via AnyDesk.</p>
       </div>
